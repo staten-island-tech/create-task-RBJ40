@@ -1,5 +1,3 @@
-let r = rock;
-let p = paper;
-let s = scissors;
+const choices = ["Rock", "Paper", "Scissors"];
 
-const userInput = prompt("Enter a move. r, p, and s.");
+const userInput = prompt("Do you want to play against a bot? y or n");
