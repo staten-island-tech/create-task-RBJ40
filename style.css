@@ -4,3 +4,6 @@ html, body{
 button{
     box-shadow: 8px 8px 8px rgb(111, 101, 101);
 }
+h1{
+    text-align: center;
+}

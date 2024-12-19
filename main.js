@@ -30,6 +30,3 @@ oneMove();
 function twoMove() {
   let userinput3 = prompt("Rock, Paper, or Scissors?");
 }
-function winner() {
-  if (userInput2 )
-}
