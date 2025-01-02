@@ -9,7 +9,7 @@ const DOMSelectors = {
 };
 
 const choices = ["Rock", "Paper", "Scissors"];
-//remember to put what wins and loses over what
+
 const winner = (player, computer) => {
   const result = document.querySelector(".result");
   const playerScoreBoard = document.querySelector(".p-count");
@@ -21,33 +21,35 @@ const winner = (player, computer) => {
   } else if (player == "rock") {
     if (computer == "paper") {
       result.textContent = "Computer Won";
-      computerScore++;
+
       computerScoreBoard.textContent = computerScore;
     } else {
       result.textContent = "Player Won";
-      playerScore++;
+
       playerScoreBoard.textContent = playerScore;
     }
   } else if (player == "scissors") {
     if (computer == "rock") {
       result.textContent = "Computer Won";
-      computerScore++;
+
       computerScoreBoard.textContent = computerScore;
     } else {
       result.textContent = "Player Won";
-      playerScore++;
+
       playerScoreBoard.textContent = playerScore;
     }
   } else if (player == "paper") {
     if (computer == "scissors") {
       result.textContent = "Computer Won";
-      computerScore++;
+
       computerScoreBoard.textContent = computerScore;
     } else {
       result.textContent = "Player Won";
-      playerScore++;
+
       playerScoreBoard.textContent = playerScore;
     }
+  }
+};
 DOMSelectors.button.addEventListener("click", function () {
   console.log("Let's go");
 });
