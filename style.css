@@ -1,5 +1,7 @@
 html, body{
     font-size: 10px;
+    background-color: azure;
+    /*maybe add a background image instead of color. considering tf2 background*/
 }
 button{
     box-shadow: 8px 8px 8px rgb(111, 101, 101);
