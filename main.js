@@ -15,34 +15,39 @@ const winner = (player, computer) => {
   const playerScoreBoard = document.querySelector(".p-count");
   const computerScoreBoard = document.querySelector(".c-count");
 
-  if (player === computer) {
-    result.textContent = "Tie";
-  } else if (player == "Rock") {
-    if (computer == "Paper") {
-      result.textContent = "Computer Won";
-      computerScoreBoard.textContent = computerScore;
-    } else {
-      result.textContent = "Player Won";
-      playerScoreBoard.textContent = playerScore;
-    }
-  } else if (player == "Paper") {
-    if (computer == "Scissors") {
-      result.textContent = "Computer Won";
-      computerScoreBoard.textContent = computerScore;
-    } else {
-      result.textContent = "Player Won";
-      playerScoreBoard.textContent = playerScore;
-    }
-  } else if (player == "Scissors") {
-    if (computer == "Rock") {
-      result.textContent = "Computer Won";
-      computerScoreBoard.textContent = computerScore;
-    } else {
-      result.textContent = "Player Won";
-      playerScoreBoard.textContent = playerScore;
+  function gameStart() {
+    //remember to put user input as parameter. might not need it though
+    if (player === computer) {
+      result.textContent = "Tie";
+    } else if (player == "Rock") {
+      if (computer == "Paper") {
+        result.textContent = "Computer Won";
+        computerScoreBoard.textContent = computerScore;
+      } else {
+        result.textContent = "Player Won";
+        playerScoreBoard.textContent = playerScore;
+      }
+    } else if (player == "Paper") {
+      if (computer == "Scissors") {
+        result.textContent = "Computer Won";
+        computerScoreBoard.textContent = computerScore;
+      } else {
+        result.textContent = "Player Won";
+        playerScoreBoard.textContent = playerScore;
+      }
+    } else if (player == "Scissors") {
+      if (computer == "Rock") {
+        result.textContent = "Computer Won";
+        computerScoreBoard.textContent = computerScore;
+      } else {
+        result.textContent = "Player Won";
+        playerScoreBoard.textContent = playerScore;
+      }
     }
   }
+  gameStart();
 };
+
 DOMSelectors.button.addEventListener("click", function () {
   console.log("Let's go");
 });
