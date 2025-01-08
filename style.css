@@ -11,8 +11,10 @@ title{
 }
 button{
     box-shadow: 8px 8px 8px rgb(111, 101, 101);
+    font-size: 7px;
 }
 h1{
     text-align: center;
+    font-size: 8px;
 }
 /*considering deleting this whole css file if not enough time*/
