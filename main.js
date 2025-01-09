@@ -47,7 +47,7 @@ const winner = (player, computer) => {
   }
   gameStart();
 };
-
+/*  considering deleting all this
 DOMSelectors.button.addEventListener("click", function () {
   console.log("Let's go");
 });
@@ -58,4 +58,5 @@ function oneMove() {
 oneMove();
 function twoMove() {
   let userinput3 = prompt("Rock, Paper, or Scissors?");
-}
+}   
+*/
