@@ -1,62 +1,45 @@
-const DOMSelectors = {
-  header: document.querySelector("h1"),
-  description: document.querySelector(".card-desc"),
-  items: document.querySelectorAll("ul"),
-  button: document.querySelectorAll("button"),
-  form: document.querySelectorAll(".form"),
-  container: document.querySelectorAll(".container"),
-  card: document.querySelector(".card"),
-};
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const playerChoices = [rock, paper, scissors];
+const computerChoices = ["Rock", "Paper", "Scissors"];
 
-const choices = ["Rock", "Paper", "Scissors"];
-
-const winner = (player, computer) => {
+playerChoices.forEach((option) => {
+  option.addEventListener("click", function () {
+    const choiceNumber = Math.floor(Math.random() * 3);
+    const computerChoice = computerChoices[choiceNumber];
+    gameStart(this.innerText, computerChoice);
+  });
+});
+const gameStart = (player, computer) => {
   const result = document.querySelector(".result");
-  const playerScoreBoard = document.querySelector(".p-count");
-  const computerScoreBoard = document.querySelector(".c-count");
 
-  function gameStart() {
-    //remember to put user input as parameter. might not need it though
-    if (player === computer) {
-      result.textContent = "Tie";
-    } else if (player == "Rock") {
-      if (computer == "Paper") {
-        result.textContent = "Computer Won";
-        computerScoreBoard.textContent = computerScore;
-      } else {
-        result.textContent = "Player Won";
-        playerScoreBoard.textContent = playerScore;
-      }
-    } else if (player == "Paper") {
-      if (computer == "Scissors") {
-        result.textContent = "Computer Won";
-        computerScoreBoard.textContent = computerScore;
-      } else {
-        result.textContent = "Player Won";
-        playerScoreBoard.textContent = playerScore;
-      }
-    } else if (player == "Scissors") {
-      if (computer == "Rock") {
-        result.textContent = "Computer Won";
-        computerScoreBoard.textContent = computerScore;
-      } else {
-        result.textContent = "Player Won";
-        playerScoreBoard.textContent = playerScore;
-      }
+  //remember to put user input as parameter. might not need it though
+  if (player === computer) {
+    result.textContent = "Tie";
+  } else if (player == "Rock") {
+    if (computer == "Paper") {
+      result.textContent = "Computer won";
+    } else {
+      result.textContent = "Player won";
+      playerScoreBoard.textContent = playerScore;
+    }
+  } else if (player == "Paper") {
+    if (computer == "Scissors") {
+      result.textContent = "Computer won";
+      computerScoreBoard.textContent = computerScore;
+    } else {
+      result.textContent = "Player won";
+      playerScoreBoard.textContent = playerScore;
+    }
+  } else if (player == "Scissors") {
+    if (computer == "Rock") {
+      result.textContent = "Computer won";
+      computerScoreBoard.textContent = computerScore;
+    } else {
+      result.textContent = "Player won";
+      playerScoreBoard.textContent = playerScore;
     }
   }
-  gameStart();
 };
-/*  considering deleting all this
-DOMSelectors.button.addEventListener("click", function () {
-  console.log("Let's go");
-});
-
-function oneMove() {
-  let userInput2 = prompt("Rock, Paper, or Scissors?");
-}
-oneMove();
-function twoMove() {
-  let userinput3 = prompt("Rock, Paper, or Scissors?");
-}   
-*/
+gameStart();
