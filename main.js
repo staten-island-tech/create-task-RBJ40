@@ -13,8 +13,6 @@ playerChoices.forEach((option) => {
 });
 const gameStart = (player, computer) => {
   const result = document.querySelector(".result");
-
-  //remember to put user input as parameter. might not need it though
   if (player === computer) {
     result.textContent = "Tie";
   } else if (player == "Rock") {
@@ -22,23 +20,18 @@ const gameStart = (player, computer) => {
       result.textContent = "Computer won";
     } else {
       result.textContent = "Player won";
-      playerScoreBoard.textContent = playerScore;
     }
   } else if (player == "Paper") {
     if (computer == "Scissors") {
       result.textContent = "Computer won";
-      computerScoreBoard.textContent = computerScore;
     } else {
       result.textContent = "Player won";
-      playerScoreBoard.textContent = playerScore;
     }
   } else if (player == "Scissors") {
     if (computer == "Rock") {
       result.textContent = "Computer won";
-      computerScoreBoard.textContent = computerScore;
     } else {
       result.textContent = "Player won";
-      playerScoreBoard.textContent = playerScore;
     }
   }
 };
