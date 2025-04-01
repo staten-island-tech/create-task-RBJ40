@@ -13,26 +13,33 @@ playerChoices.forEach((option) => {
 });
 function gameStart(player, computer) {
   const result = document.querySelector(".result");
-  if (player === computer) {
-    result.textContent = "Tie";
-  } else if (player == "Rock") {
-    if (computer == "Paper") {
-      result.textContent = "Computer won";
-    } else {
-      result.textContent = "Player won";
-    }
-  } else if (player == "Paper") {
-    if (computer == "Scissors") {
-      result.textContent = "Computer won";
-    } else {
-      result.textContent = "Player won";
-    }
-  } else if (player == "Scissors") {
-    if (computer == "Rock") {
-      result.textContent = "Computer won";
-    } else {
-      result.textContent = "Player won";
+  let wins = 0;
+  while (wins < 3) {
+    if (player === computer) {
+      result.textContent = "Tie";
+    } else if (player == "Rock") {
+      if (computer == "Paper") {
+        result.textContent = "Computer won";
+      } else {
+        result.textContent = "Player won";
+        wins++;
+      }
+    } else if (player == "Paper") {
+      if (computer == "Scissors") {
+        result.textContent = "Computer won";
+      } else {
+        result.textContent = "Player won";
+        wins++;
+      }
+    } else if (player == "Scissors") {
+      if (computer == "Rock") {
+        result.textContent = "Computer won";
+      } else {
+        result.textContent = "Player won";
+        wins++;
+      }
     }
   }
+  result.textContent = "Player won three times";
 }
 gameStart();
