@@ -11,7 +11,7 @@ playerChoices.forEach((option) => {
     gameStart(this.innerText, computerChoice);
   });
 });
-const gameStart = (player, computer) => {
+function gameStart(player, computer) {
   const result = document.querySelector(".result");
   if (player === computer) {
     result.textContent = "Tie";
@@ -34,5 +34,5 @@ const gameStart = (player, computer) => {
       result.textContent = "Player won";
     }
   }
-};
+}
 gameStart();
