@@ -11,6 +11,7 @@ playerChoices.forEach((option) => {
     gameStart(this.innerText, computerChoice);
   });
 });
+
 function gameStart(player, computer) {
   const result = document.querySelector(".result");
   let wins = 0;
@@ -46,4 +47,4 @@ function gameStart(player, computer) {
     }
   }
 }
-gameStart();
+gameStart(player, computer);
