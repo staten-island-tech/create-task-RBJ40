@@ -38,8 +38,12 @@ function gameStart(player, computer) {
         result.textContent = "Player won";
         wins++;
       }
+      if (computer.wins == 3) {
+        result.textContent = "Computer won three times";
+      } else if (player.wins == 3) {
+        result.textContent = "Player won three times";
+      }
     }
   }
-  result.textContent = "Player won three times";
 }
 gameStart();
