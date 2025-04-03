@@ -54,3 +54,4 @@ function gameStart(player, computer) {
     }
   }
 }
+gameStart(player, computer);
