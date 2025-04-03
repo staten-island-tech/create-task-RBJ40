@@ -3,6 +3,7 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const playerChoices = [rock, paper, scissors];
 const computerChoices = ["Rock", "Paper", "Scissors"];
+
 let playerWins = 0;
 let computerWins = 0;
 
@@ -53,4 +54,3 @@ function gameStart(player, computer) {
     }
   }
 }
-gameStart(player, computer);
