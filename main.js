@@ -47,11 +47,9 @@ function gameStart(player, computer) {
   }
   while (playerWins < 3 && computerWins < 3) {
     if (computerWins === 3) {
-      result.textContent = "Computer won three times. Game over!";
-      break;
+      result.textContent = "Computer won three times.";
     } else if (playerWins === 3) {
-      result.textContent = "Player won three times. Game over!";
-      break;
+      result.textContent = "Player won three times.";
     }
   }
 }
